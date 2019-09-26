@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+	<div class="col-md-12 header home">
+	<img src="/static/media/pen.png" class="img-fluid" height=200px width=200px>
+	</div>
+	<div class="col-md-12 home title">
+	just a thought...
+	</div>
+	<div class="col-md-12 header home">
+	<br>Welcome to your new platform for giving and receiving anonymous feedback on your creative writing.
+	</div>
+	<div class="col-md-12 header home">
+	<br>Select what you'd like to do today
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-2">
+	</div>
+	<div class = "col-md-4">
+		<a class = "link" href="/upload_writing"><button type="button" class="btn btn-info hmebutton butON">Upload Writing</a></button>
+	</div>
+	<div class="col-md-2">
+	</div>
+	<div class = "col-md-4">
+		<a class = "link" href="/search"><button type="button" class="btn btn-info hmebutton butON">Edit Writing</a></button>
+	</div>
+</div>
+{% endblock %}

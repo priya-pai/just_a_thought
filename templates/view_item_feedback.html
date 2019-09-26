@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'view_item.js') }}"></script>
+<script>
+	var index = {{index|tojson}}
+	var item = {{item|tojson}}
+	var title={{title|tojson}}
+ 	var username={{username|tojson}}
+	var content= {{content|tojson}}
+	var typE={{typE|tojson}}
+	var genre={{genre|tojson}}
+	var writing= {{writing|tojson}}
+	var feedback={{feedback|tojson}}
+</script>
+
+   <div class="row field">
+	   	<div class="col-md-6 header">
+	    	<span>View Entry</span>
+	    </div>
+   </div>
+   <div class="row field view">
+	   	<div class="col-md-6">
+	   		<div class="col-md-12 entryview">
+				<span class="heading">Title of Work:</span> <span id="titleView"></span>
+			</div>
+			<div class="col-md-12 entryview">
+				<span class="heading">Username: </span><span id="usernameView"></span>
+			</div>	
+			<div class="col-md-12 entryview">
+				<span class="heading">Genre:</span> <span id="genreView"></span>
+			</div>
+			<div class="col-md-12">
+				<span class="heading">Content:</span> <br><p id="contentView"></p>
+			</div>
+		</div>	
+		<div class="col-md-6">
+			<div class = "col-md-12">
+				<span class="heading">Feedback:</span> <br>
+			</div>
+			<div class = "col-md-12" id="feedbackArea">
+			</div>
+		</div>
+		</div>
+   </div>
+
+
+ {% endblock %}

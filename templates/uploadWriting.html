@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'upload.js') }}"></script>
+<script>
+	var writing = {{writing|tojson}}
+	var current_id = {{current_id|tojson}}
+</script>
+   <div class="row field">
+	   	<div class="col-md-12">
+	    	<p class="text-center" id="new">Upload your writing!</p>
+	    </div>
+   </div>
+
+   <div class="row field">
+   		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<b>Title of Work:</b> <input type="text" id="title" placeholder="Ex: The Hunger Games" size="30">
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<b>Username: </b>
+priya_pai		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<b>Type:</b> <input type="text" id="type" placeholder="Fiction" size="30">
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<b>Genre:</b> <input type="text" id="genre" placeholder="romance" size="30">
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<b>Content: </b><br> <textarea rows="20" cols="80" id="content" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta ultrices ex sed maximus."></textarea>
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class = "col-md-12">
+			<p class="text-center"><button type="button" id="addWriting" class="btn btn-primary butON">Upload Piece</button></p>
+		</div>
+	</div>
+ {% endblock %}

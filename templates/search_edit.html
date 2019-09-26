@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'search.js')}}"></script>
+<script>
+	var writing = {{writing|tojson}}
+	var tags = {{tags|tojson}}
+</script>
+<div class="row field">
+	<div class="col-md-6">
+		<span id="searchHead">Find writing to give feedback on!</span>
+	</div>
+</div>
+<div class="row field">
+	<div class="col-md-9">
+		<input type="text" id="searchItem" placeholder="Ex: fiction, romance" size="50">
+		<button type="button" id="search" class="btn btn-secondary">Search</button>
+	</div>
+</div>
+<div id="searchResults">
+</div>
+ {% endblock %}

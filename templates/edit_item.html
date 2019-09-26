@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit_item.js') }}"></script>
+<script>
+	var index = {{index|tojson}}
+	var item = {{item|tojson}}
+	var title={{title|tojson}}
+ 	var username={{username|tojson}}
+	var content= {{content|tojson}}
+	var typE={{typE|tojson}}
+	var genre={{genre|tojson}}
+	var writing= {{writing|tojson}}
+</script>
+   <div class="row field">
+	   	<div class="col-md-12">
+	    	<p class="text-center" id="new">Edit your entry...</p>
+	    </div>
+   </div>
+
+   <div class="row field">
+   		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<span class="heading"> Title of Work:<br></span> <textarea id="titleEdit" class="txt" rows="1" cols="20"></textarea>
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<span class="heading">Username:</span> <br>priya_pai
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+	   	<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<span class="heading">Type:</span><br><textarea id="typeEdit" class="txt" rows="1" cols="20"></textarea>
+		</div>
+	   	<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<span class="heading">Genre:</span><br> <textarea id="genreEdit" class="txt" rows="1" cols="30"></textarea>
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class="col-md-3">
+   		</div>
+		<div class="col-md-6">
+			<span class="heading">Content:</span> <br><textarea id="contentEdit" rows="25" cols="60"></textarea>
+		</div>
+		<div class="col-md-3">
+   		</div>
+	</div>
+	<div class="row field">
+		<div class = "col-md-12">
+			<p class="text-center"><button type="button" id="saveEdit" class="btn btn-primary">Save Changes</button></p>
+		</div>
+	</div>
+
+ {% endblock %}

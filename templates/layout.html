@@ -1,0 +1,125 @@
+<html>
+	<head>
+			<!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<!-- bootstrap same as before -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<style>
+		#bar{
+			margin-bottom:30px;
+			background-color:#8FC4F9 ;
+		}
+		#head{
+			margin-top:30px;
+		}
+		#bar a.active{
+			color:white;
+		}
+		#bar a{
+			color:#303132;
+		}
+		#bar a:hover{
+			color:white;
+		}
+		body{
+		      font-family: 'Montserrat', sans-serif;
+		    }
+		.header{
+			font-size:24px;
+			margin-bottom:10px;
+		}
+		.title{
+			font-size:30px;
+			margin-bottom:10px;
+		}
+		.delete{
+			background-color:#D16861;
+		}
+		a{
+			color:black;
+		}
+		.home{
+			text-align:center;
+		}
+		.hmebutton{
+			padding:20px;
+		}
+		.butON{
+			margin-top:10px;
+		}
+		#new{
+			font-size:22px;
+			margin-bottom:15px;
+		}
+		#searchHead{
+			font-size:21px;
+			margin-bottom:15px;
+		}
+		#searchItem{
+			margin-top:20px;
+			margin-bottom:30px;
+		}
+		#view{
+			height:80%;
+		}
+		.heading{
+			font-size:18px;
+			font-weight:bolder;
+		}
+		.entryview{
+			margin-bottom:10px;
+		}
+		#sub{
+			margin-top:10px;
+			margin-bottom:20px;
+			font-size:18px;
+			font-weight:bolder;
+		}
+		.btn-view{
+			background-color:#8FC4F9;
+			color:black;
+			margin-bottom:3px;
+		}
+		.txt{
+			margin:5px;
+		}
+		#subH{
+			margin-top:10px;
+			margin-bottom:10px;
+			font-size:18px;
+			font-weight:bolder;
+		}
+		</style>
+	</head>
+
+
+  	<body>
+  	<header>
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-md-12 header" id="head">
+	  			just a thought...
+	  			</div>
+	  		</div>
+			<nav class="navbar navbar-expand-lg" id="bar">
+			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			    <div class="navbar-nav">
+			    <a class="nav-item nav-link active" href="/home" id="homeTab">Home</a>
+			      <a class="nav-item nav-link" href="/search" id="editTab">Edit Writing</a>
+			      <a class="nav-item nav-link" href="/upload_writing" id="uploadTab">Upload Writing</a>
+			      <a class="nav-item nav-link" href="/view_all" id="viewAllTab">All Pieces</a>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+	</header>
+	<div class="container" id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

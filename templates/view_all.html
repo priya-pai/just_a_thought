@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'view_all.js') }}"></script>
+<script>
+	var writing = {{writing|tojson}}
+	var current_id= {{current_id|tojson}}
+</script>
+   <div class="row">
+		<div class="col-md-12 header">
+		All Uploaded Pieces
+		</div>
+   </div>
+<div class="row" id="sub">
+	<div class="col-md-3"> Title </div>
+	<div class="col-md-3"> Username </div>
+	<div class="col-md-1"> Type </div>
+	<div class="col-md-1"> Genre </div>
+	<div class="col-md-4"></div>
+</div>
+<div id="allWritingPieces">
+</div>
+ {% endblock %}
